@@ -1,12 +1,16 @@
 from openai import OpenAI
+import os
+import sys
 
-def get_model():
-    model="gpt-4o"
-    return model
+dir_path = os.path.dirname(os.path.realpath('utils.py'))
+sys.path.insert(0, dir_path)
 
-OPENAI_API_KEY  = ""
+import keep_api_key
+
+
+
 model="gpt-4o"
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(api_key=keep_api_key.API_KEY)
 
 
 def extract_attributes(clause_in):
