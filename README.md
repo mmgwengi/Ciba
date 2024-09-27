@@ -22,22 +22,6 @@ py -m pip install -r requirements.txt
 Use the Ciba exercise notebook provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
 Relevant data can be found in _clauses - clauses.csv_
 
-## To Validate Results
-
-### Steps
-
-1. **Convert JSON Output to DataFrame**
-    - Transform the JSON output received from GPT-4o into a DataFrame for easier manipulation and analysis.
-
-2. **Get Relevant Columns from Original Dataset**
-    - Extract the necessary columns from the original dataset that correspond to the information extracted by GPT-4o.
-
-3. **Align Column Names**
-    - Ensure that the columns in both the extracted DataFrame and the original dataset have identical names. This facilitates direct comparison and validation.
-
-4. **Standardize Columns**
-    - Standardize the data in the columns for consistency. For example, some dollar amounts may include a '$' symbol while others do not.
-
 ## Access Endpoint
 You can use Postman to test the Azure Function endpoint.
 Here is the URL to access the endpoint: https://funcapp-clauseciba.azurewebsites.net/api/clauseciba_func?code=KitK0fOm2MM9EizkVkQtzexVjCB6Zi6qemp-SfgwoDs1AzFubvrX6Q%3D%3D&clause=
@@ -63,8 +47,23 @@ A few things to consider to move this project to production:
 4. **Context Window**
    - Add summarization in the event of context window limitation
 
-## Areas for Improvement
+### Areas for Improvement
 
-### Guide Rails and Edge Cases
+#### Guide Rails and Edge Cases
 - Consider adding guide rails to improve accuracy and robustness.
 - Evaluate and address potential edge cases to enhance extraction performance.
+#### To Validate Results
+
+##### Steps
+
+1. **Convert JSON Output to DataFrame**
+    - Transform the JSON output received from GPT-4o into a DataFrame for easier manipulation and analysis.
+
+2. **Get Relevant Columns from Original Dataset**
+    - Extract the necessary columns from the original dataset that correspond to the information extracted by GPT-4o.
+
+3. **Align Column Names**
+    - Ensure that the columns in both the extracted DataFrame and the original dataset have identical names. This facilitates direct comparison and validation.
+
+4. **Standardize Columns**
+    - Standardize the data in the columns for consistency. For example, some dollar amounts may include a '$' symbol while others do not.
