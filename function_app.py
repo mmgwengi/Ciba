@@ -27,7 +27,7 @@ def clauseciba_func(req: func.HttpRequest) -> func.HttpResponse:
             clause = req_body.get('clause')
 
     if clause:
-        return func.HttpResponse(f"{utils.extract_attributes(clause)}")
+        return func.HttpResponse(f"{utils.extract_insurance_info(clause)}")
     else:
         return func.HttpResponse(
              "Missing required parameters. 'clause' is required.",
