@@ -19,7 +19,7 @@ Run the following command in your terminal to install all necessary dependencies
 py -m pip install -r requirements.txt
 
 ### Step 3: Use Ciba Exercise Notebook
-Use the Ciba exercise notebook provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
+Use the Ciba exercise notebook (Ciba exercise.ipynb) provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
 Relevant data can be found in _clauses - clauses.csv_
 
 ## Access Endpoint
@@ -57,10 +57,10 @@ A few things to consider to move this project to production:
 ##### Steps
 
 1. **Convert JSON Output to DataFrame**
-    - Transform the JSON output received from GPT-4o into a DataFrame for easier manipulation and analysis.
+    - Transform the JSON output received from gpt-4o into a DataFrame for easier manipulation and analysis.
 
 2. **Get Relevant Columns from Original Dataset**
-    - Extract the necessary columns from the original dataset that correspond to the information extracted by GPT-4o.
+    - Extract the necessary columns from the original dataset that correspond to the information extracted by gpt-4o.
 
 3. **Align Column Names**
     - Ensure that the columns in both the extracted DataFrame and the original dataset have identical names. This facilitates direct comparison and validation.
