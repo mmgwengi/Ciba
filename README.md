@@ -13,12 +13,17 @@ To run this project locally, you will need:
 ### Step 1: Obtain OpenAI API Key
 You must have an OpenAI API key to access GPT-4o. If you don't have one, you can request it from OpenAI's website.
 
-### Step 2: Install Required Libraries
+### Step 2: Create keep_api_key.py
+Save keep_api_key.py with the following content
+API_KEY = "your-open-ai-key"
+
+
+### Step 3: Install Required Libraries
 Run the following command in your terminal to install all necessary dependencies:
 
 py -m pip install -r requirements.txt
 
-### Step 3: Use Ciba Exercise Notebook
+### Step 4: Use Ciba Exercise Notebook
 Use the Ciba exercise notebook (Ciba exercise.ipynb) provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
 Relevant data can be found in _clauses - clauses.csv_
 
