@@ -20,6 +20,7 @@ py -m pip install -r requirements.txt
 
 ### Step 3: Use Ciba Exercise Notebook
 Use the Ciba exercise notebook provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
+Relevant data can be found in clauses - clauses.csv
 
 ## Access Endpoint
 You can use Postman to test the Azure Function endpoint.
