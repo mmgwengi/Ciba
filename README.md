@@ -13,13 +13,18 @@ To run this project locally, you will need:
 ### Step 1: Obtain OpenAI API Key
 You must have an OpenAI API key to access GPT-4o. If you don't have one, you can request it from OpenAI's website.
 
-### Step 2: Install Required Libraries
+### Step 2: Create keep_api_key.py
+Save keep_api_key.py with the following content
+API_KEY = "your-open-ai-key"
+
+
+### Step 3: Install Required Libraries
 Run the following command in your terminal to install all necessary dependencies:
 
 py -m pip install -r requirements.txt
 
-### Step 3: Use Ciba Exercise Notebook
-Use the Ciba exercise notebook provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
+### Step 4: Use Ciba Exercise Notebook
+Use the Ciba exercise notebook (Ciba exercise.ipynb) provided in the repository to execute extract_insurance_info() function, which can be found in utils.py, and extract insurance information.
 Relevant data can be found in _clauses - clauses.csv_
 
 ## Access Endpoint
@@ -47,8 +52,23 @@ A few things to consider to move this project to production:
 4. **Context Window**
    - Add summarization in the event of context window limitation
 
-## Areas for Improvement
+### Areas for Improvement
 
-### Guide Rails and Edge Cases
+#### Guide Rails and Edge Cases
 - Consider adding guide rails to improve accuracy and robustness.
 - Evaluate and address potential edge cases to enhance extraction performance.
+#### To Validate Results
+
+##### Steps
+
+1. **Convert JSON Output to DataFrame**
+    - Transform the JSON output received from gpt-4o into a DataFrame for easier manipulation and analysis.
+
+2. **Get Relevant Columns from Original Dataset**
+    - Extract the necessary columns from the original dataset that correspond to the information extracted by gpt-4o.
+
+3. **Align Column Names**
+    - Ensure that the columns in both the extracted DataFrame and the original dataset have identical names. This facilitates direct comparison and validation.
+
+4. **Standardize Columns**
+    - Standardize the data in the columns for consistency. For example, some dollar amounts may include a '$' symbol while others do not.
