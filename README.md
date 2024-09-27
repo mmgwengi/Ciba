@@ -1,6 +1,6 @@
 # Insurance Information Extraction from Legal Clauses
 
-This repository is designed to extract insurance-related information from legal clauses using AI techniques. Specifically, it employs GPT-4o and chain-of-thought prompting to accurately and efficiently extract the necessary information. The gpt-4o model is utilized in JSON mode to format results in the expected manner.
+This repository is designed to extract insurance-related information from legal clauses using AI techniques. Specifically, it employs gpt-4o and chain-of-thought prompting to accurately and efficiently extract the necessary information. The gpt-4o model is utilized in JSON mode to format results in the expected manner.
 
 ## Prerequisites
 
