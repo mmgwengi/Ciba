@@ -42,6 +42,9 @@ A few things to consider to move this project to production:
 
 3. **Error Handling:**
    - Implement comprehensive error handling to manage potential disruptions and ensure smooth operation.
+  
+4. **Context Window**
+   - Add summarization in the event of context window limitation
 
 ## Areas for Improvement
 
