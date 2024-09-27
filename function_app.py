@@ -13,23 +13,23 @@ import keep_api_key
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
-@app.route(route="clauseciba_func")
+@app.route(route="clauseciba_func", methods=["GET", "POST"])
 def clauseciba_func(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    name = req.params.get('name')
-    if not name:
+    clause = str(req.params.get('clause'))
+    if not clause:
         try:
             req_body = req.get_json()
         except ValueError:
             pass
         else:
-            name = req_body.get('name')
+            clause = req_body.get('clause')
 
-    if name:
-        return func.HttpResponse(f"{utils.extract_attributes(name)}")
+    if clause:
+        return func.HttpResponse(f"{utils.extract_attributes(clause)}")
     else:
         return func.HttpResponse(
-             "something",
-             status_code=200
+             "Missing required parameters. 'clause' is required.",
+            status_code=400
         )
