@@ -21,6 +21,14 @@ py -m pip install -r requirements.txt
 ### Step 3: Use Ciba Exercise Notebook
 Use the Ciba exercise notebook provided in the repository to execute the function and extract insurance information.
 
+## Access Endpoint
+You can use Postman to test the Azure Function endpoint.
+Here is the URL to access the endpoint: https://funcapp-clauseciba.azurewebsites.net/api/clauseciba_func?code=KitK0fOm2MM9EizkVkQtzexVjCB6Zi6qemp-SfgwoDs1AzFubvrX6Q%3D%3D&clause=
+
+Refer to the image below for an example input:
+![image](https://github.com/user-attachments/assets/2bb0a899-c96a-4547-b49a-994cbd219c05)
+
+
 ## Productionizing
 
 A few things to consider to move this project to production:
